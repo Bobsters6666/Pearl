@@ -58,8 +58,6 @@ export const appRouter = router({
       },
     });
 
-    console.log(PLANS.find((plan) => plan.name === "Pro")?.price.priceIds.test);
-
     if (!dbUser) throw new TRPCError({ code: "UNAUTHORIZED" });
 
     const subscriptionPlan = await getUserSubscriptionPlan();
